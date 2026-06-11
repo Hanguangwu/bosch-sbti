@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bosch SBTI 博世职场人格测试</title>
+  <link rel="stylesheet" href="static/style.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>Bosch SBTI</h1>
+    <p class="subtitle">博世职场人格测试 · 玩梗版</p>
+    <p class="lead">
+      共 21 题，每题 <strong>A / B / C / D</strong> 四选一，按职场真实第一反应作答即可。
+      四维：<strong>严谨 R / 随性 S</strong>、<strong>内卷 J / 摸鱼 M</strong>、<strong>直给 D / 圆滑 Y</strong>、<strong>质量 Q / 将就 O</strong>，组合成你的四字母风格码。
+    </p>
+  </header>
+
+  <!-- 答题区 -->
+  <main id="quiz-section" class="card card-wide">
+    <div id="quiz-container"></div>
+  </main>
+
+  <!-- 结果区 -->
+  <main id="result-section" class="card result-card" style="display:none">
+    <header class="hero compact" style="padding-top:0">
+      <h1>博世 SBTI 结果</h1>
+      <p id="result-warn" class="warn" style="display:none"></p>
+    </header>
+
+    <div class="type-image">
+      <img id="result-image" src="" alt="" />
+    </div>
+    <div class="type-badge" id="result-code" aria-label="四字母人格码"></div>
+    <p class="type-desc" id="result-desc"></p>
+
+    <h2 class="section-title">四维题数分布（R/S · J/M · D/Y · Q/O）</h2>
+    <ul class="breakdown" id="breakdown-list"></ul>
+
+    <div class="actions">
+      <button class="btn secondary" onclick="resetQuiz()">再测一次</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>仅供同事趣味自测，非测评工具</p>
+    <p class="visit-count">页面访问次数：<span id="visit-counter">0</span></p>
+  </footer>
+
+  <script src="static/quiz.js"></script>
+</body>
+</html>
